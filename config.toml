@@ -1,0 +1,4 @@
+baseURL = 'https://depy.github.io/'
+languageCode = 'en-us'
+title = 'Little Red Likelihood'
+theme = 'hugo-ink'
