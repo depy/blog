@@ -1,0 +1,7 @@
+.site-title a {
+    color: #333;
+}
+.site-title a:hover {
+    color: #333;
+    border-bottom: none;
+}
