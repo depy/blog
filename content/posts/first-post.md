@@ -2,7 +2,7 @@
 title: "First Post"
 description: "My very own first post..."
 date: 2021-10-04T19:57:53+02:00
-draft: false
+draft: true
 ---
 
 PBR&B echo park squid, bushwick craft beer dreamcatcher roof party air plant copper mug bespoke quinoa wolf. Quinoa kale chips humblebrag franzen messenger bag. Drinking vinegar slow-carb lomo 8-bit banjo squid palo santo. Fingerstache taxidermy vape vinyl chia marfa skateboard tousled everyday carry.
