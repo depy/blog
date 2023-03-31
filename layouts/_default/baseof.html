@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ .Site.Title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    html {
+      font: 16px 'Verdana';
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: justify;
+  	}
+
+    body {
+      color: #333;
+    }
+
+    p {
+        line-height: 1.5em;
+    }
+
+    h2 {
+      margin-top: 2.5em;
+      margin-bottom: 0em;
+    }
+
+    h3, h4 {
+      margin-top: 1.5em;
+      margin-bottom: -0.35em;
+    }
+  </style>
+</head>
+<body>
+  <h1>{{ .Title }}</h1>
+  {{ block "main" . }}
+  {{ .Content }}
+  {{ end}}
+</body>
+</html>

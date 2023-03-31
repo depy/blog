@@ -1,0 +1,5 @@
+baseURL = 'http://rdmengineer.com/'
+languageCode = 'en-us'
+title = 'Red Mage Engineer'
+
+disableKinds = ["taxonomy", "taxonomyTerm"]
