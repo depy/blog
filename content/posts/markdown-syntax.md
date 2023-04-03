@@ -13,6 +13,8 @@ This and all public gists in https://gist.github.com/ww9 are [Public Domain](htt
 
 I'm baby narwhal unicorn fit woke, neutral milk hotel PBR&B hella cupping gastropub plaid slow-carb. XOXO pickled health goth pok pok messenger bag. Raclette street art disrupt stumptown. Portland knausgaard lo-fi palo santo, sus fashion axe bespoke small batch tote bag readymade gochujang etsy.
 
+-----
+
 Trust fund praxis neutral milk hotel af truffaut, gochujang sustainable deep v vice mukbang gatekeep photo booth hoodie. Green juice vaporware mixtape viral. Pickled church-key praxis selvage selfies brunch messenger bag, chartreuse occupy asymmetrical big mood pok pok craft beer vape. Gluten-free bicycle rights pop-up yr, iceland tonx banjo intelligentsia palo santo flexitarian artisan gastropub. Cloud bread single-origin coffee blackbird spyplane tacos whatever stumptown sartorial pinterest letterpress offal gluten-free before they sold out hammock.
 
 ### Lorem poopsom
@@ -24,6 +26,8 @@ Wayfarers selvage 8-bit trust fund marxism bodega boys sustainable. Keffiyeh fit
 This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.
 
 Hello, world!
+
+<small>small text</small>
 
 ## Paragraph
 
@@ -46,6 +50,10 @@ The blockquote element represents content that is quoted from another source, op
 > — <cite>Rob Pike[^1]</cite>
 
 [^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
+
+## Images
+
+![Red Mage Gopher](/images/rdmgopher.png)
 
 ## Tables
 
@@ -101,7 +109,7 @@ Table with no header...
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Example HTML5 Document</title>
+  <title>Example HTML5 Document</title><br/><br/>
 </head>
 <body>
   <p>Test</p>
@@ -132,15 +140,3 @@ Table with no header...
 * Dairy
   * Milk
   * Cheese
-
-## Other Elements — abbr, sub, sup, kbd, mark
-
-<abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.
-
-H<sub>2</sub>O
-
-X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
-
-Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
-
-Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.

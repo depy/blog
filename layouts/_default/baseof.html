@@ -8,32 +8,130 @@
   <meta name="description" content="A blog about stuff. Mostly technical stuff.">
   <style>
     html {
-      font: 16px 'Verdana';
-      max-width: 900px;
-      margin: 0 auto;
-  	}
+      font-size: 62.5%;
+      font-family: 'Verdana';
+    }
 
     body {
-      margin: 16px;
+      font-size: 1.8rem;
+      line-height: 1.618;
+      max-width: 38em;
+      margin: auto;
+      color: #4a4a4a;
+      background-color: #f9f9f9;
+      padding: 13px;
+    }
+
+    @media (max-width: 684px) {
+      body {
+        font-size: 1.53rem;
+      }
+    }
+
+    @media (max-width: 382px) {
+      body {
+        font-size: 1.35rem;
+      }
+    }
+    h1, h2, h3, h4, h5, h6 {
+      line-height: 1.1;
+      font-family: 'Verdana';
+      font-weight: 700;
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      -ms-word-break: break-all;
+      word-break: break-word;
+    }
+
+    h1 {
+      font-size: 2.35em;
+    }
+
+    h2 {
+      font-size: 1.7em;
+    }
+
+    h3 {
+      font-size: 1.4em;
+    }
+
+    h4 {
+      font-size: 1.1em;
     }
 
     p {
-        line-height: 1.4em;
+      margin-top: 0px;
+      margin-bottom: 2.5rem;
+    }
+
+    ul, li {
+      margin-bottom: 0.4em;
+    }
+
+    blockquote {
+      margin-left: 0px;
+      margin-right: 0px;
+      padding-left: 1em;
+      padding-top: 0.8em;
+      padding-bottom: 0.8em;
+      padding-right: 0.8em;
+      border-left: 5px solid #1d7484;
+      margin-bottom: 2.5rem;
+      background-color: #f1f1f1;
     }
     
-    h2 {
-      margin-top: 48px;
+    blockquote p {
       margin-bottom: 0;
     }
 
-    h3, h4 {
-      margin-top: 32px;
-      margin-bottom: -8px;
+    img, video {
+      height: auto;
+      max-width: 100%;
+      margin-top: 0px;
+      margin-bottom: 2.5rem;
     }
 
     pre {
-      overflow: auto;
-      padding: 8px;
+      background-color: #f1f1f1;
+      display: block;
+      padding: 1em;
+      overflow-x: auto;
+      margin-top: 0px;
+      margin-bottom: 2.5rem;
+      font-size: 0.9em;
+    }
+
+    code, kbd, samp {
+      font-size: 0.9em;
+      padding: 0 0.5em;
+      background-color: #f1f1f1;
+      white-space: pre-wrap;
+    }
+
+    pre > code {
+      padding: 0;
+      background-color: transparent;
+      white-space: pre;
+      font-size: 1em;
+    }
+
+    table {
+      text-align: justify;
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    td, th {
+      padding: 0.25em;
+      border-bottom: 1px solid gray;
+    }
+
+    label, legend, fieldset {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
     }
   </style>
 </head>
