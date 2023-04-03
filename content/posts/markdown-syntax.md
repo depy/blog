@@ -39,12 +39,12 @@ Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sap
 
 The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a `footer` or `cite` element, and optionally with in-line changes such as annotations and abbreviations.
 
-#### Blockquote without attribution
+### Blockquote without attribution
 
 > Tiam, ad mint andaepu dandae nostion secatur sequo quae.
 > **Note** that you can use *Markdown syntax* within a blockquote.
 
-#### Blockquote with attribution
+### Blockquote with attribution
 
 > Don't communicate by sharing memory, share memory by communicating.<br>
 > — <cite>Rob Pike[^1]</cite>
@@ -65,7 +65,7 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
   Alice | 23
   Whoda | 37
 
-#### Inline Markdown within tables
+### Inline Markdown within tables
 
 Table with no header...
 
@@ -75,7 +75,7 @@ Table with no header...
 
 ## Code Blocks
 
-#### Code block with backticks
+### Code block with backticks
 
 ```html
 <!doctype html>
@@ -90,7 +90,79 @@ Table with no header...
 </html>
 ```
 
-#### Code block indented with four spaces
+```javascript
+var x, y, z;  // Declare 3 variables
+x = 5;    // Assign the value 5 to x
+y = 6;    // Assign the value 6 to y
+z = x + y;  // Assign the sum of x and y to z
+
+document.getElementById("demo").innerHTML =
+"The value of z is " + z + ".";
+```
+
+```ruby
+def sum_eq_n?(arr, n)
+  return true if arr.empty? && n == 0
+
+  arr.product(arr).reject { |a,b| a == b }.any? { |a,b| a + b == n }
+end
+```
+
+```python
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+  def myfunc(self):
+    print("Hello my name is " + self.name)
+
+p1 = Person("John", 36)
+
+p1.age = 40
+
+print(p1.age)
+```
+
+```j
+dna =: +/"1 @: ('ACGT'=/])
+rna =: (] ` (]&'U') @. ('T'=]))"0
+revc =: |. @ ('TCAG' {~ 'AGTC' i."1 ])
+```
+
+```forth
+\ "No Weighting" from Starting Forth Chapter 12
+VARIABLE DENSITY
+VARIABLE THETA
+VARIABLE ID
+
+: " ( -- addr )   [CHAR] " WORD DUP C@ 1+ ALLOT ;
+
+: MATERIAL ( addr n1 n2 -- )    \ addr=string, n1=density, n2=theta
+   CREATE  , , , 
+   DOES> ( -- )   DUP @ THETA !
+   CELL+ DUP @ DENSITY !  CELL+ @ ID ! ;
+
+: .SUBSTANCE ( -- )   ID @ COUNT TYPE ;
+: FOOT ( n1 -- n2 )   10 * ;
+: INCH ( n1 -- n2 )   100 12 */  5 +  10 /  + ;
+: /TAN ( n1 -- n2 )   1000 THETA @ */ ;
+
+: PILE ( n -- )         \ n=scaled height
+   DUP DUP 10 */ 1000 */  355 339 */  /TAN /TAN
+   DENSITY @ 200 */  ." = " . ." tons of "  .SUBSTANCE ;
+
+\ table of materials
+\   string-address  density  tan[theta] 
+   " cement"           131        700  MATERIAL CEMENT
+   " loose gravel"      93        649  MATERIAL LOOSE-GRAVEL
+   " packed gravel"    100        700  MATERIAL PACKED-GRAVEL
+   " dry sand"          90        754  MATERIAL DRY-SAND
+   " wet sand"         118        900  MATERIAL WET-SAND
+   " clay"             120        727  MATERIAL CLAY
+```
+
+### Code block indented with four spaces
 
     <!doctype html>
     <html lang="en">
@@ -103,7 +175,7 @@ Table with no header...
     </body>
     </html>
 
-#### Code block with Hugo's internal highlight shortcode
+### Code block with Hugo's internal highlight shortcode
 {{< highlight html >}}
 <!doctype html>
 <html lang="en">
@@ -119,19 +191,19 @@ Table with no header...
 
 ## List Types
 
-#### Ordered List
+### Ordered List
 
 1. First item
 2. Second item
 3. Third item
 
-#### Unordered List
+### Unordered List
 
 * List item
 * Another item
 * And another item
 
-#### Nested list
+### Nested list
 
 * Fruit
   * Apple

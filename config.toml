@@ -4,3 +4,9 @@ title = 'Red Mage Engineer'
 
 disableKinds = ["taxonomy", "taxonomyTerm"]
 enableRobotsTXT = true
+
+
+
+[markup]
+  [markup.highlight]
+    style = 'github-dark'
