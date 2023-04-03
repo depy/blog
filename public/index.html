@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta name="generator" content="Hugo 0.111.3">
   <meta charset="UTF-8">
-  <title>{{ .Site.Title }}</title>
+  <title>Red Mage Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="A blog about stuff. Mostly technical stuff.">
   <link rel="shortcut icon" href="/favicon.png">
+  <link rel="stylesheet" href="/css/syntax.css">
   <style>
     html {
       font-size: 62.5%;
@@ -46,7 +48,7 @@
     }
 
     h1 {
-      font-size: 2em;
+      font-size: 2.35em;
     }
 
     h2 {
@@ -133,37 +135,17 @@
       margin-bottom: 0.5rem;
       font-weight: 600;
     }
-
-    .top-bar {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 16px;
-    }
-
-    .header-gopher {
-      width: 100px;
-      height: 100px;
-      border-bottom: 1px solid black;
-    }
-
-    .post-list {
-      margin-top: 32px;
-      padding-top: 16px;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .title {
-      display: flex;
-      justify-content: space-around;
-      border-bottom: 2px solid black;
-      margin-bottom: 2em;
-    }
   </style>
 </head>
 <body>
-  {{ block "main" . }}
-    {{ .Content }}
-  {{ end}}
+  <h1>Red Mage Engineer</h1>
+  
+
+<ul class="all-posts">
+
+<li><a href="/posts/markdown-syntax/">Markdown syntax</a></li>
+
+</ul>
+
 </body>
 </html>

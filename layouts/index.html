@@ -1,8 +1,13 @@
 {{ define "main" }}
-{{.Content}}
-<ul class="all-posts">
-{{range .Site.RegularPages}}
-<li><a href="{{.Permalink}}">{{.Title}}</a></li>
-{{end}}
-</ul>
+<div class="top-bar">
+    <img class="header-gopher" src="/images/rdmgopher.png"/>
+    <h1>{{ .Title }}</h1>
+    <img class="header-gopher" src="/images/rdmgopher.png"/>
+  </div>
+{{ .Content }}
+    <div class="post-list">
+    {{ range .Site.RegularPages }}
+        <div><a href="{{.Permalink}}">{{.Title}}</a></div><div>{{ .PublishDate.Format "2006-01-02" }}</div>
+    {{end}}
+    </div>
 {{ end }}
