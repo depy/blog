@@ -90,7 +90,7 @@ Table with no header...
 </html>
 ```
 
-```javascript
+{{< highlight javascript >}}
 var x, y, z;  // Declare 3 variables
 x = 5;    // Assign the value 5 to x
 y = 6;    // Assign the value 6 to y
@@ -98,17 +98,17 @@ z = x + y;  // Assign the sum of x and y to z
 
 document.getElementById("demo").innerHTML =
 "The value of z is " + z + ".";
-```
+{{< /highlight >}}
 
-```ruby
+{{< highlight ruby >}}
 def sum_eq_n?(arr, n)
   return true if arr.empty? && n == 0
 
   arr.product(arr).reject { |a,b| a == b }.any? { |a,b| a + b == n }
 end
-```
+{{< /highlight >}}
 
-```python
+{{< highlight python >}}
 class Person:
   def __init__(self, name, age):
     self.name = name
@@ -122,15 +122,15 @@ p1 = Person("John", 36)
 p1.age = 40
 
 print(p1.age)
-```
+{{< /highlight >}}
 
-```j
+{{< highlight j >}}
 dna =: +/"1 @: ('ACGT'=/])
 rna =: (] ` (]&'U') @. ('T'=]))"0
 revc =: |. @ ('TCAG' {~ 'AGTC' i."1 ])
-```
+{{< /highlight >}}
 
-```forth
+{{< highlight forth >}}
 \ "No Weighting" from Starting Forth Chapter 12
 VARIABLE DENSITY
 VARIABLE THETA
@@ -160,7 +160,7 @@ VARIABLE ID
    " dry sand"          90        754  MATERIAL DRY-SAND
    " wet sand"         118        900  MATERIAL WET-SAND
    " clay"             120        727  MATERIAL CLAY
-```
+{{< /highlight >}}
 
 ### Code block indented with four spaces
 
