@@ -77,7 +77,7 @@ Table with no header...
 
 ### Code block with backticks
 
-```html
+```
 <!doctype html>
 <html lang="en">
 <head>
@@ -90,7 +90,7 @@ Table with no header...
 </html>
 ```
 
-{{< highlight javascript >}}
+{{< highlight js >}}
 var x, y, z;  // Declare 3 variables
 x = 5;    // Assign the value 5 to x
 y = 6;    // Assign the value 6 to y

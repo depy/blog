@@ -9,4 +9,7 @@ enableRobotsTXT = true
 
 [markup]
   [markup.highlight]
-    style = 'github-dark'
+    guessSyntax = false
+    noClasses = true
+    noHl = false
+    style = 'dracula'
