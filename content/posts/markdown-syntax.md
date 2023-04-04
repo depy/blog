@@ -101,13 +101,13 @@ document.getElementById("demo").innerHTML =
 "The value of z is " + z + ".";
 {{< /highlight >}}
 
-{{< highlight ruby >}}
+```ruby
 def sum_eq_n?(arr, n)
   return true if arr.empty? && n == 0
 
   arr.product(arr).reject { |a,b| a == b }.any? { |a,b| a + b == n }
 end
-{{< /highlight >}}
+```
 
 {{< highlight python >}}
 class Person:
@@ -118,10 +118,10 @@ class Person:
   def myfunc(self):
     print("Hello my name is " + self.name)
 
+
+
 p1 = Person("John", 36)
-
 p1.age = 40
-
 print(p1.age)
 {{< /highlight >}}
 

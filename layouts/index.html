@@ -1,13 +1,16 @@
 {{ define "main" }}
-<div class="top-bar">
-    <img class="header-gopher" src="/images/rdmgopher.png"/>
-    <h1>{{ .Title }}</h1>
-    <img class="header-gopher" src="/images/rdmgopher.png"/>
-  </div>
 {{ .Content }}
     <div class="post-list">
     {{ range .Site.RegularPages }}
-        <div><a href="{{.Permalink}}">{{.Title}}</a></div><div>{{ .PublishDate.Format "2006-01-02" }}</div>
+        <div class="list-row">
+            <div>
+                <a href="{{.Permalink}}">{{.Title}}</a>
+            </div>
+            <div class="publish-date">
+                {{ .PublishDate.Format "2006-01-02" }}
+            </div>
+        </div>
+        
     {{end}}
     </div>
 {{ end }}
