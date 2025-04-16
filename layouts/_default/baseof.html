@@ -26,7 +26,7 @@
       
 
       h1 {
-        font-size: 1.4em !important;
+        font-size: 1.3em !important;
       }
 
       h2 {
@@ -55,20 +55,20 @@
     }
 
     h1 {
-      font-size: 2em;
+      font-size: 1.8em;
       display: inline;
     }
 
     h2 {
-      font-size: 1.7em;
-    }
-
-    h3 {
       font-size: 1.4em;
     }
 
-    h4 {
+    h3 {
       font-size: 1.2em;
+    }
+
+    h4 {
+      font-size: 1em;
     }
 
     p {
@@ -165,6 +165,7 @@
     a {
       color: #3a3a3a;
       text-decoration: none;
+      font-weight: 900;
     }
 
     a:visited {
@@ -187,7 +188,7 @@
       display: flex;
       justify-content: space-between;
       border-bottom: 2px solid #3a3a3a;
-      margin-bottom: 2em;
+      margin-bottom: 8px;
       min-height: 55px;
     }
 
@@ -197,21 +198,34 @@
       border-bottom: 2px solid #3a3a3a;
       min-height: 55px;
     }
+
+    .header-img {
+      display: block;
+      margin: auto;
+      margin-bottom: 16px;
+      border-bottom: 2px solid #3a3a3a;
+    }
+
+    .backlink {
+      font-size: 1em;
+      margin-left: 8px;
+      margin-right: -8px;
+    }
   </style>
 </head>
 <body>
   {{ if not .IsHome }}
     <div class="header">
-      <div class="w75">
-          <a href="/">< Home</a>
+      <div class="backlink">
+        <h1><a href="/">⇦</a></h1>
       </div>
       <div class="title">
         <h1>{{ .Title }}</h1>
       </div>
-      <div class="w75">
-      </div>
+      <div></div>
     </div>
   {{ else }}
+    <img class="header-img" src="/images/rdmgopher.png"/>
     <div class="header-home">
       <div class="title">
         <h1>{{ .Title }}</h1>

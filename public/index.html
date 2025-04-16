@@ -1,40 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.111.3">
+	<meta name="generator" content="Hugo 0.146.4"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="UTF-8">
   <title>Red Mage Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="A blog about stuff. Mostly technical stuff.">
   <link rel="shortcut icon" href="/favicon.png">
-  <link rel="stylesheet" href="/css/syntax.css">
   <style>
     html {
       font-size: 62.5%;
       font-family: 'Georgia';
+      color: #3a3a3a;
+      background-color: #fbfbfb;
     }
 
     body {
       font-size: 2rem;
       line-height: 1.618;
-      max-width: 38em;
+      max-width: 36em;
       margin: auto;
-      color: #2a2a2a;
-      background-color: #fbfbfb;
       padding: 13px;
     }
 
     @media (max-width: 684px) {
-      body {
-        font-size: 1.53rem;
+      
+
+      h1 {
+        font-size: 1.3em !important;
       }
+
+      h2 {
+        font-size: 1.2em !important;
+      }
+
+      h3 {
+        font-size: 1.1em !important;
+      }
+
+      h4 {
+        font-size: 1em !important;
+      } 
     }
 
-    @media (max-width: 382px) {
-      body {
-        font-size: 1.35rem;
-      }
-    }
     h1, h2, h3, h4, h5, h6 {
       line-height: 1.1;
       font-family: 'Verdana';
@@ -48,19 +56,20 @@
     }
 
     h1 {
-      font-size: 2.35em;
+      font-size: 1.8em;
+      display: inline;
     }
 
     h2 {
-      font-size: 1.7em;
-    }
-
-    h3 {
       font-size: 1.4em;
     }
 
-    h4 {
+    h3 {
       font-size: 1.2em;
+    }
+
+    h4 {
+      font-size: 1em;
     }
 
     p {
@@ -79,7 +88,7 @@
       padding-top: 0.8em;
       padding-bottom: 0.8em;
       padding-right: 0.8em;
-      border-left: 5px solid #1d7484;
+      border-left: 5px solid #1275b8;
       margin-bottom: 2.5rem;
       background-color: #f1f1f1;
     }
@@ -135,17 +144,100 @@
       margin-bottom: 0.5rem;
       font-weight: 600;
     }
+
+    .post-list {
+      margin-top: 32px;
+      padding-top: 16px;
+    }
+
+    .list-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5em;
+      border-bottom: 1px dashed gray;
+    }
+
+    .w75 {
+      width: 128px;
+      display: flex;
+      align-items: center;
+    }
+
+    a {
+      color: #3a3a3a;
+      text-decoration: none;
+      font-weight: 900;
+    }
+
+    a:visited {
+      color: #3a3a3a; 
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .publish-date {
+      font-weight: 600;
+    }
+
+    .title {
+      text-align: center;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 2px solid #3a3a3a;
+      margin-bottom: 8px;
+      min-height: 55px;
+    }
+
+    .header-home {
+      display: flex;
+      justify-content: center;
+      border-bottom: 2px solid #3a3a3a;
+      min-height: 55px;
+    }
+
+    .header-img {
+      display: block;
+      margin: auto;
+      margin-bottom: 16px;
+      border-bottom: 2px solid #3a3a3a;
+    }
+
+    .backlink {
+      font-size: 1em;
+      margin-left: 8px;
+      margin-right: -8px;
+    }
   </style>
 </head>
 <body>
-  <h1>Red Mage Engineer</h1>
+  
+    <img class="header-img" src="/images/rdmgopher.png"/>
+    <div class="header-home">
+      <div class="title">
+        <h1>Red Mage Engineer</h1>
+      </div>
+    </div>
+  
   
 
-<ul class="all-posts">
-
-<li><a href="/posts/markdown-syntax/">Markdown syntax</a></li>
-
-</ul>
+    <div class="post-list">
+    
+        <div class="list-row">
+            <div>
+                <a href="//localhost:1313/posts/2025-04-16-no-spaces/">No spaces? Challenge accepted!</a>
+            </div>
+            <div class="publish-date">
+                2025-04-16
+            </div>
+        </div>
+        
+    
+    </div>
 
 </body>
 </html>

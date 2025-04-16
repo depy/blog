@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <title>Red Mage Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A blog about stuff. Mostly technical stuff.">
+  <link rel="shortcut icon" href="/favicon.png">
+  <style>
+    html {
+      font-size: 62.5%;
+      font-family: 'Georgia';
+      color: #3a3a3a;
+      background-color: #fbfbfb;
+    }
+
+    body {
+      font-size: 2rem;
+      line-height: 1.618;
+      max-width: 36em;
+      margin: auto;
+      padding: 13px;
+    }
+
+    @media (max-width: 684px) {
+      
+
+      h1 {
+        font-size: 1.3em !important;
+      }
+
+      h2 {
+        font-size: 1.2em !important;
+      }
+
+      h3 {
+        font-size: 1.1em !important;
+      }
+
+      h4 {
+        font-size: 1em !important;
+      } 
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      line-height: 1.1;
+      font-family: 'Verdana';
+      font-weight: 700;
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      -ms-word-break: break-all;
+      word-break: break-word;
+    }
+
+    h1 {
+      font-size: 1.8em;
+      display: inline;
+    }
+
+    h2 {
+      font-size: 1.4em;
+    }
+
+    h3 {
+      font-size: 1.2em;
+    }
+
+    h4 {
+      font-size: 1em;
+    }
+
+    p {
+      margin-top: 0px;
+      margin-bottom: 2.5rem;
+    }
+
+    ul, li {
+      margin-bottom: 0.4em;
+    }
+
+    blockquote {
+      margin-left: 0px;
+      margin-right: 0px;
+      padding-left: 1em;
+      padding-top: 0.8em;
+      padding-bottom: 0.8em;
+      padding-right: 0.8em;
+      border-left: 5px solid #1275b8;
+      margin-bottom: 2.5rem;
+      background-color: #f1f1f1;
+    }
+    
+    blockquote p {
+      margin-bottom: 0;
+    }
+
+    img, video {
+      height: auto;
+      max-width: 100%;
+      margin-top: 0px;
+      margin-bottom: 2.5rem;
+    }
+
+    pre {
+      background-color: #f1f1f1;
+      display: block;
+      padding: 1em;
+      overflow-x: auto;
+      margin-top: 0px;
+      margin-bottom: 2.5rem;
+      font-size: 0.9em;
+    }
+
+    code, kbd, samp {
+      font-size: 0.9em;
+      padding: 0 0.5em;
+      background-color: #f1f1f1;
+      white-space: pre-wrap;
+    }
+
+    pre > code {
+      padding: 0;
+      background-color: transparent;
+      white-space: pre;
+      font-size: 1em;
+    }
+
+    table {
+      text-align: justify;
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    td, th {
+      padding: 0.25em;
+      border-bottom: 1px solid gray;
+    }
+
+    label, legend, fieldset {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .post-list {
+      margin-top: 32px;
+      padding-top: 16px;
+    }
+
+    .list-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5em;
+      border-bottom: 1px dashed gray;
+    }
+
+    .w75 {
+      width: 128px;
+      display: flex;
+      align-items: center;
+    }
+
+    a {
+      color: #3a3a3a;
+      text-decoration: none;
+      font-weight: 900;
+    }
+
+    a:visited {
+      color: #3a3a3a; 
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .publish-date {
+      font-weight: 600;
+    }
+
+    .title {
+      text-align: center;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 2px solid #3a3a3a;
+      margin-bottom: 8px;
+      min-height: 55px;
+    }
+
+    .header-home {
+      display: flex;
+      justify-content: center;
+      border-bottom: 2px solid #3a3a3a;
+      min-height: 55px;
+    }
+
+    .header-img {
+      display: block;
+      margin: auto;
+      margin-bottom: 16px;
+      border-bottom: 2px solid #3a3a3a;
+    }
+
+    .backlink {
+      font-size: 1em;
+      margin-left: 8px;
+      margin-right: -8px;
+    }
+  </style>
+</head>
+<body>
+  
+    <div class="header">
+      <div class="backlink">
+        <h1><a href="/">⇦</a></h1>
+      </div>
+      <div class="title">
+        <h1>No spaces? Challenge accepted!</h1>
+      </div>
+      <div></div>
+    </div>
+  
+  
+<h2 id="tldr">TL;DR</h2>
+<p>A contractor coworker - let&rsquo;s call him Jim - built an application that accepts the user&rsquo;s URL and uses that to run another program with <code>child_process.exec</code>. Jim forgot to sanitize the URL, so I was able to abuse it and get RCE. Jim then fixed the issue by validating URLs with a regex that does not allow spaces, greater than and less than symbols, curly braces, and more. I found a way around it with the <code>IFS</code> shell variable and single quotes: <code>https://www.google.com/;A=$IFS;touch$A'omg.txt';</code></p>
+<h2 id="intro">Intro</h2>
+<h3 id="what-is-rce">What is RCE?</h3>
+<p>Remote Code Execution is a type of vulnerability or exploit in which an attacker can execute arbitrary code on a target system from a remote location.</p>
+<h3 id="disclaimer">Disclaimer</h3>
+<p>I&rsquo;m not a cyber security professional. Most of my experience is with software (backend) development. When it comes to cyber security, I only played some Tryhackme and Hack The Box for fun. That said, this might not be something innovative, but I found it interesting enough to share and hopefully someone will stumble upon this and learn something new.</p>
+<h2 id="the-discovery">The discovery</h2>
+<p>It was a beautiful and sunny spring day, and I was helping deploy a NodeJS application that a contractor coworker - Let&rsquo;s call him Jim - was developing. The application accepted the user&rsquo;s URL and ran some diagnostics on it. The deployment was done, but the app and its backend didn&rsquo;t work exactly how they should. Being curious and eager to help, I went spelunking.</p>
+<p>I knew the application spawns other processes, and I remembered I saw many zombie processes the other day when I was checking the deployment, so I started there. After poking around for a while, I found something interesting. A call to <code>exec</code>.
+Surely, it doesn&rsquo;t use any user input, right? Right? It did. But, the user input is validated, right? Right? It wasn&rsquo;t. It passed the URL unsanitized as a parameter to another command that <code>exec</code> was running.</p>
+<pre tabindex="0"><code>...
+let commandLine = `url-diagnostics-app `;
+...
+commandLine += `--url=${url} `;
+...
+</code></pre><p>The first thing that came to mind was &ldquo;RCE!&rdquo;.</p>
+<p>So I had to try it, and lo and behold, it worked. I added <code>;</code> to the URL to &ldquo;split&rdquo; the command in two and then executed my command to create an empty file on the filesystem as a proof of concept. I had to terminate the URL with another <code>;</code> to cut off the rest of the original parameters.</p>
+<h2 id="the-fix">The fix</h2>
+<p>I showed this to Jim, who quickly fixed the issue—or so we thought. The fix was a regex to validate URLs and prevent special characters like spaces, percentage signs, less than and greater than signs, and others from being valid. Well, now my normal commands with spaces won&rsquo;t work anymore.</p>
+<p>Challenge accepted!</p>
+<h2 id="the-bypass">The bypass</h2>
+<p>So, I searched for ways to write commands without spaces and found some, but they included curly braces, which the validation also excluded. I opened the shell and started trying things. After messing around for a while with the <code>IFS</code> shell variable, I was able to make it work together with single quotes like this: <code>A=$IFS;touch$A'omg.txt'</code>.</p>
+<p>Now that this worked, it was time to figure out what the servers were running to spawn a reverse shell. On our development server, I was first able to use this technique to install <code>netcat</code> and then use it again to spawn a reverse shell with netcat. I knew Jim was running this application on his server also, so I tried it there but couldn&rsquo;t get it to work. But after we talked a bit more about it, he showed me a list of packages he had installed on that server, and something caught my eye. BusyBox! I tried the reverse shell snippet for BusyBox, and&hellip; I worked!</p>
+<h2 id="lesson-learned">Lesson learned</h2>
+<p>Now, it&rsquo;s easy to think that this shouldn&rsquo;t happen or doesn&rsquo;t happen to senior developers or more capable developers. Still, the reality is that this happens more often than we think to developers of all kinds of seniority levels. We introduced better, proper fixes, including better validation, using <code>spawn</code> instead of <code>exec</code> and called it a &ldquo;lesson learned&rdquo;.</p>
+<h2 id="ps">P.S.</h2>
+<p>I found out later, after reading more about Linux commands without spaces on Unix &amp; Linux StackExchange, that this one should also work: <code>IFS=:;A=touch:omg.wtf;$A</code></p>
+<h2 id="read-more">Read more</h2>
+<p><a href="https://www.cloudflare.com/learning/security/what-is-remote-code-execution/">https://www.cloudflare.com/learning/security/what-is-remote-code-execution/</a>
+<a href="https://owasp.org/www-community/attacks/Command_Injection">https://owasp.org/www-community/attacks/Command_Injection</a>
+<a href="https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html</a></p>
+
+
+</body>
+</html>
