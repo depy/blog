@@ -237,12 +237,10 @@
 <p>It was a beautiful and sunny spring day, and I was helping deploy a NodeJS application that a contractor coworker - Let&rsquo;s call him Jim - was developing. The application accepted the user&rsquo;s URL and ran some diagnostics on it. The deployment was done, but the app and its backend didn&rsquo;t work exactly how they should. Being curious and eager to help, I went spelunking.</p>
 <p>I knew the application spawns other processes, and I remembered I saw many zombie processes the other day when I was checking the deployment, so I started there. After poking around for a while, I found something interesting. A call to <code>exec</code>.
 Surely, it doesn&rsquo;t use any user input, right? Right? It did. But, the user input is validated, right? Right? It wasn&rsquo;t. It passed the URL unsanitized as a parameter to another command that <code>exec</code> was running.</p>
-<pre tabindex="0"><code>...
-let commandLine = `url-diagnostics-app `;
-...
-commandLine += `--url=${url} `;
-...
-</code></pre><p>The first thing that came to mind was &ldquo;RCE!&rdquo;.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">let</span> commandLine <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">`url-diagnostics-app `</span>;
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>commandLine <span style="color:#ff79c6">+=</span> <span style="color:#f1fa8c">`--url=</span><span style="color:#f1fa8c">${</span>url<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> `</span>;
+</span></span></code></pre></div><p>The first thing that came to mind was&hellip; RCE!</p>
 <p>So I had to try it, and lo and behold, it worked. I added <code>;</code> to the URL to &ldquo;split&rdquo; the command in two and then executed my command to create an empty file on the filesystem as a proof of concept. I had to terminate the URL with another <code>;</code> to cut off the rest of the original parameters.</p>
 <h2 id="the-fix">The fix</h2>
 <p>I showed this to Jim, who quickly fixed the issue—or so we thought. The fix was a regex to validate URLs and prevent special characters like spaces, percentage signs, less than and greater than signs, and others from being valid. Well, now my normal commands with spaces won&rsquo;t work anymore.</p>
