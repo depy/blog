@@ -41,7 +41,8 @@ showAppearanceSwitcher = true
 showScrollToTop = true
 
 [homepage]
-layout = "profile"
+layout = "hero"
+homepageImage = "routers-bg.jpeg"
 showRecent = false
 showRecentItems = 5
 showMoreLink = false

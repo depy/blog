@@ -8,7 +8,7 @@ logo = ""
 
 [params.author]
 name = "Matjaz Muhic"
-image = "img/author.jpg"
+image = "hero.png"
 headline = "The curious one..."
 bio = "A little bit a bout me and my hobbies and my work and my musical instruments and stuff."
 links = [
@@ -17,4 +17,3 @@ links = [
   { linkedin = "https://www.linkedin.com/in/matjazmuhic/" },
   { telegram = "https://t.me/matjazmuhic"}
 ]
-
