@@ -1,3 +1,20 @@
 baseURL = 'https://rdme.dev/'
 locale = 'en-us'
-title = 'Test1'
+
+title = 'Red Mage Engineering'
+
+[params]
+logo = ""
+
+[params.author]
+name = "Matjaz Muhic"
+image = "img/author.jpg"
+headline = "The curious one..."
+bio = "A little bit a bout me and my hobbies and my work and my musical instruments and stuff."
+links = [
+  { email = "matjazvn@gmail.com" },
+  { github = "https://github.com/depy" },
+  { linkedin = "https://www.linkedin.com/in/matjazmuhic/" },
+  { telegram = "https://t.me/matjazmuhic"}
+]
+
