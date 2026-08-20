@@ -1,6 +1,6 @@
-colorScheme = "congo"
+colorScheme = "burufugu"
 defaultAppearance = "dark"
-autoSwitchAppearance = true
+autoSwitchAppearance = false
 enableA11y = false
 enableSearch = true
 enableCodeCopy = false
@@ -8,11 +8,14 @@ enableStructuredBreadcrumbs = false
 replyByEmail = false
 disableImageOptimization = false
 disableImageOptimizationMD = false
+disableImageZoom = true
 disableTextInHeader = false
 hotlinkFeatureImage = false
 fingerprintAlgorithm = "sha512"
-giteaDefaultServer = "https://git.fsfe.org"
-forgejoDefaultServer = "https://v11.next.forgejo.org"
+thumbnailAspectRatio = "2.0"
+description = "Red Mage Engineering — practical notes on embedded systems, networking, and home labs. Contracting and consulting to help teams ship reliable hardware."
+# giteaDefaultServer = "https://git.fsfe.org"
+# forgejoDefaultServer = "https://v11.next.forgejo.org"
 seo = { }
 firebase = { }
 fathomAnalytics = { }
@@ -31,23 +34,23 @@ browserRedirectHomeOnly = true
 storedLanguageRedirect = true
 
 [header]
-layout = "fixed-fill-blur"
+layout = "basic"
 
 [footer]
 showMenu = true
 showCopyright = true
 showThemeAttribution = true
-showAppearanceSwitcher = true
+showAppearanceSwitcher = false
 showScrollToTop = true
 
 [homepage]
 layout = "hero"
-homepageImage = "routers-bg.jpeg"
-showRecent = false
+homepageImage = "routers-bg.webp"
+showRecent = true
 showRecentItems = 5
-showMoreLink = false
+showMoreLink = true
 showMoreLinkDest = "/posts/"
-cardView = false
+cardView = true
 cardViewScreenWidth = false
 layoutBackgroundBlur = false
 disableHeroImageFilter = false
@@ -62,7 +65,7 @@ showAuthor = false
 showHero = false
 layoutBackgroundBlur = true
 layoutBackgroundHeaderSpace = true
-showBreadcrumbs = false
+showBreadcrumbs = true
 showDraftLabel = true
 showEdit = false
 editAppendPath = true
@@ -72,7 +75,7 @@ showPagination = true
 invertPagination = false
 showReadingTime = true
 showReadingProgress = false
-showTableOfContents = false
+showTableOfContents = true
 showTaxonomies = false
 showCategories = true
 showTags = true

@@ -16,13 +16,45 @@ showLikes = false
 showViews = false
 +++
 
-Hi, I'm **Matjaz Muhic** — the curious one.
+Hi, I'm **Matjaz** — an engineer and tinkerer by heart and someone who learns fast and likes to solve hard problems with technology.
 
-A little bit about me and my hobbies and my work and my musical instruments and stuff.
+Since I've been a kid, I hard to urge to take things apart. I started on computers at age 7 (DOS, Windows 3.1, Logo), built my first website at 12, went to technical high school for computer tehcnicians and then on to do a computer science degree at FERI in Maribor (Slovenia). Throughout my career I went from an individual contributor to team lead and then CTO and back, because I missed getting my "hands dirty".
 
-## Links
+From backend code, data analytics and Google Cloud, to now embedded systems, I pick up new things fairly quickly and love to dig in and go deep.
 
-- Email: matjazvn@gmail.com
-- GitHub: [depy](https://github.com/depy)
-- LinkedIn: [matjazmuhic](https://www.linkedin.com/in/matjazmuhic/)
-- Telegram: [@matjazmuhic](https://t.me/matjazmuhic)
+## Recent experience
+
+**Embedded Developer — Mono Technologies**
+
+- Built a Raspberry Pi test jig/device covering the full board pipeline (JTAG bring-up, QSPI/eMMC flashing, OpenWRT/Linux programming, network validation). We used it to process our first 1,000 boards.
+- Helped trace a board-bricking firmware bug to a PD-controller timing gap and proposed a datasheet-correct fix.
+- Did PoC for flash recovery on a semi-dead board by injecting power and controlling the flash chip directly using PCB probes, logic analyzer and Tigard.
+- Did a PoC for capturing JTAG communication between proprietary debugger and the LS1046a with a JTAG breakout board and logic analyzer.
+- Did a PoC for JTAG semihosting on LS1046A with cheap non-proprietary JTAG probe/debugger.
+- Validated and tested 10 GbE and IPSec hardware offloading.
+- Designed a GPIO adapter board in KiCad.
+- Wrote developer documentation covering the full boot chain (PoR → PBL → BL2 → BL31 → U-Boot → Linux) and flashing different operating system images.
+- Prepared the data room for investors
+
+**CTO / Tech Lead — Codeable**
+
+- Led the product and development team.
+- Was responsible for everything technology (cloud infrastructure/DevOps, data/analytics stack, software development, ...)
+- Built and ran the Google Cloud and Kubernetes infrastructure, CI/CD, and backend (Ruby on Rails).
+- Designed the data stack (PostgreSQL, Airflow, BigQuery, Looker) and delivered dashboards, A/B tests, and Bayesian analysis.
+- Did all the data analysis from Looker to manual Python analysis (Jupyter, bayesian analysis, ...)
+- Wrote Ruby backend with extensive test suite for the web app.
+
+## Core competencies
+
+- Embedded develoment and debugging
+- Backend development
+- Data analysis & BI
+- Google Cloud Platform
+
+## Beyond work
+
+- I run a home lab for networking, telemetry, and home automation.
+- I tinker with embedded programming electronics, FPGAs.
+- I try to keep up with cyber security around IoT, reverse engineering and hardware hacking.
+- I relax by soldering.

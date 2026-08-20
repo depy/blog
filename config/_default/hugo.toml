@@ -16,6 +16,9 @@ buildFuture = false
 
 enableEmoji = true
 
+[params]
+  env = "production"
+
 # googleAnalytics = "G-XXXXXXXXX"
 
 [pagination]

@@ -7,6 +7,3 @@ weight = 5
 name = "Blog"
 pageRef = "posts"
 weight = 10
-
-[[footer]]
-none = "none"

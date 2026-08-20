@@ -8,9 +8,8 @@ logo = ""
 
 [params.author]
 name = "Matjaz Muhic"
-image = "hero.png"
-headline = "The curious one..."
-bio = "A little bit a bout me and my hobbies and my work and my musical instruments and stuff."
+image = "hero.webp"
+headline = "Unfamiliar is fine... Figuring it out and shipping it is what I do best."
 links = [
   { email = "matjazvn@gmail.com" },
   { github = "https://github.com/depy" },
